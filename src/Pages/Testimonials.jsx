@@ -20,14 +20,14 @@ const Testimonial = () => {
 
     return (
         <section
-            className="bg-white py-16 px-6 md:px-20"
+            className="bg-white py-16 px-3 md:px-10"
             aria-labelledby="testimonial-heading"
         >
             {/* Section Header */}
             <header className="text-center mb-12">
                 <h2
                     id="testimonial-heading"
-                    className="text-2xl md:text-3xl font-bold mb-3"
+                    className="text-2xl md:text-4xl text-gray-800 font-bold mb-3"
                 >
                     What Clients Say
                 </h2>
@@ -41,7 +41,7 @@ const Testimonial = () => {
             <article className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
                 {/* Left Side */}
                 <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-4">{testimonial.title}</h3>
+                    <h3 className="text-xl text-gray-800 font-semibold mb-4">{testimonial.title}</h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                         {testimonial.description}
                     </p>

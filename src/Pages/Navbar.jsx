@@ -27,7 +27,7 @@ export default function Navbar() {
     ];
 
     return (
-        <header className="w-full border-b border-gray-200 bg-white">
+        <header className="w-full fixed bg-white z-50  md:bg-transparent backdrop-blur-3xl">
             {/* Actual Navbar */}
             <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
                 {/* Logo */}
@@ -49,17 +49,32 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Desktop Right */}
+                {/* Desktop Right signin and block button */}
                 <div className="hidden md:flex items-center gap-6">
-                    <span className="font-semibold text-gray-800">SIGN IN</span>
-                    <button className="bg-gray-800 px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:bg-gray-900 transition">
+                    
+                    
+
+                    <button
+                        className="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-200 px-6 py-2 text-base font-semibold text-black transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-black/50 cursor-pointer"
+                    >
+                        <span className="text-lg uppercase">sign in</span>
+                        <div
+                            className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] 
+                            group-hover:duration-1000 group-hover:[transform:skew(-13deg)_translateX(100%)]"
+                        >
+                            <div className="relative h-full w-10 bg-primary/20"></div>
+                        </div>
+                    </button>
+
+                    
+                    <button className="bg-gray-800 px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:bg-gray-900 transition cursor-pointer">
                         BLOCKS
                     </button>
                 </div>
 
                 {/* Mobile Hamburger / Close */}
                 <button
-                    className="md:hidden ml-auto text-2xl text-gray-700"
+                    className="md:hidden ml-auto text-2xl text-gray-700 cursor-pointer"
                     aria-label={menuOpen ? "Close Menu" : "Open Menu"}
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
@@ -79,7 +94,7 @@ export default function Navbar() {
                             <a
                                 key={link.label}
                                 href={link.href}
-                                className="flex items-center text-gray-800 hover:text-gray-900 font-medium"
+                                className="flex items-center text-gray-800 hover:text-gray-900 font-medium cursor-pointer"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 {link.icon}
@@ -88,10 +103,23 @@ export default function Navbar() {
                         ))}
                     </div>
 
-                    {/* Bottom Buttons */}
-                    <div className="mt-auto flex flex-col items-center gap-4">
-                        <span className="font-semibold text-gray-800">SIGN IN</span>
-                        <button className="bg-gray-800 px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:bg-gray-900 transition">
+                    {/* Signin and Blog Bottom Buttons */}
+                    <div className="mt-auto flex flex-col items-start gap-4">
+                       
+                        <button
+                            className="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-200 px-6 py-2 text-base font-semibold text-black transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-black/50 cursor-pointer"
+                        >
+                            <span className="text-lg uppercase">sign in</span>
+                            <div
+                                className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] 
+                            group-hover:duration-1000 group-hover:[transform:skew(-13deg)_translateX(100%)]"
+                            >
+                                <div className="relative h-full w-10 bg-primary/20"></div>
+                            </div>
+                        </button>
+                        
+                        
+                        <button className="bg-gray-800 px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:bg-gray-900 transition cursor-pointer">
                             BLOCKS
                         </button>
                     </div>

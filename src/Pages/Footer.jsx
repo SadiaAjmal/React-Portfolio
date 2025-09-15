@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const Footer = () => {
@@ -11,26 +12,14 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-gray-100 border-t border-gray-200">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-6 py-10">
-                {/* Left Side */}
-                <div className="text-gray-700 text-sm text-center md:text-left">
-                    <p>
-                        &copy; {year} Made with <span className="font-semibold">Material Tailwind</span> by{" "}
-                        <a href="#" className="hover:underline">
-                            Creative Tim
-                        </a>
-                        . Distributed by{" "}
-                        <a href="#" className="hover:underline">
-                            ThemeWagon
-                        </a>
-                    </p>
-                </div>
-
+        <footer className=" md:px-10 px-3 w-full md:pt-10">
+            <div className=" w-full flex flex-col md:flex-row items-center justify-between gap-6 md:border-t py-5 border-gray-300">
+                
+                
                 {/* Right Side - Links + Subscribe */}
-                <div className="flex flex-col md:flex-row items-center gap-4">
+                <div className="flex flex-col md:flex-row items-center gap-4 md:order-last">
                     {/* Links */}
-                    <ul className="flex flex-wrap items-center gap-6 text-gray-700 text-sm font-medium">
+                    <ul className="flex flex-wrap items-center gap-6 text-gray-700 font-medium">
                         {links.map((link) => (
                             <li key={link.id}>
                                 <a
@@ -44,10 +33,24 @@ const Footer = () => {
                     </ul>
 
                     {/* Subscribe Button */}
-                    <button className="bg-gray-800 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-900 transition">
+                    <button className="bg-gray-800 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-900 transition uppercase cursor-pointer">
                         Subscribe
                     </button>
                 </div>
+                
+                
+                
+                {/* Left Side */}
+                <div className="text-gray-700  text-center md:text-left md:order-first">
+                    <p>
+                        &copy; {year} Made with <span className="font-semibold">Material Tailwind</span> by Creative Tim. Distributed by
+                        <a href="#" className="hover:underline">
+                            ThemeWagon
+                        </a>
+                    </p>
+                </div>
+
+
             </div>
         </footer>
     );

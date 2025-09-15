@@ -3,7 +3,7 @@ import { FiPhone, FiMail, FiLifeBuoy } from "react-icons/fi";
 
 const Contact = () => {
     return (
-        <section className="flex flex-col md:flex-row min-h-screen gap-6 md:gap-10 p-6 md:p-16 bg-white">
+        <section className="flex flex-col md:flex-row gap-6 md:gap-10 md:px-10 px-3 bg-white">
             {/* Left Side - Contact Info */}
             <aside className="bg-gray-900 text-white rounded-lg p-8 md:p-12 flex-1">
                 <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
@@ -27,7 +27,7 @@ const Contact = () => {
             </aside>
 
             {/* Right Side - Contact Form */}
-            <form className="flex-1 bg-white p-6 md:p-10">
+            <form className="flex-1 bg-white py-6 md:p-10">
                 {/* Name Fields */}
                 <div className="flex flex-col md:flex-row gap-6 mb-6">
                     <div className="flex flex-col flex-1">
@@ -80,19 +80,19 @@ const Contact = () => {
                     </legend>
                     <div className="flex flex-wrap gap-6">
                         <label className="flex items-center gap-2 text-sm">
-                            <input type="radio" name="interest" value="design" defaultChecked />
+                            <input type="radio" name="interest" value="design" defaultChecked className=" accent-primary h-4 w-5 outline-none cursor-pointer" />
                             Design
                         </label>
                         <label className="flex items-center gap-2 text-sm">
-                            <input type="radio" name="interest" value="development" />
+                            <input type="radio" name="interest" value="development" className=" accent-primary h-4 w-5 outline-none cursor-pointer" />
                             Development
                         </label>
                         <label className="flex items-center gap-2 text-sm">
-                            <input type="radio" name="interest" value="support" />
+                            <input type="radio" name="interest" value="support" className=" accent-primary h-4 w-5 outline-none cursor-pointer" />
                             Support
                         </label>
                         <label className="flex items-center gap-2 text-sm">
-                            <input type="radio" name="interest" value="other" />
+                            <input type="radio" name="interest" value="other" className=" accent-primary h-4 w-5 outline-none cursor-pointer" />
                             Other
                         </label>
                     </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    className="bg-gray-900 hover:bg-gray-700 text-white font-semibold px-6 py-3 rounded-md"
+                    className="bg-gray-900 cursor-pointer hover:bg-gray-700 text-white font-semibold px-6 py-3 rounded-md"
                 >
                     SEND MESSAGE
                 </button>

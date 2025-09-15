@@ -36,9 +36,9 @@ const logos = [
 
 export default function Clients() {
     return (
-        <section className="w-full py-12 bg-white">
-            <div className="flex flex-col items-center justify-center">
-                <h3 className="text-xl font-semibold text-gray-800 mb-10 text-center">
+        <section className="w-full md:px-10 px-3 py-12 bg-white">
+            <div className="flex flex-col items-start justify-center">
+                <h3 className="text-xl font-semibold text-gray-800 mb-10 text-center w-full">
                     My awesome clients
                 </h3>
                 <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 w-full">
@@ -49,7 +49,7 @@ export default function Clients() {
                                 alt={logo.alt}
                                 className="h-12 md:h-16 w-auto object-contain"
                                 loading="lazy"
-                                style={{ maxWidth: "160px" }}
+                                style={{ maxWidth: "110px" }}
                             />
                         </div>
                     ))}

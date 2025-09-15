@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Hero() {
+const Hero = () => {
     return (
-        <div className="flex flex-col md:flex-row bg-white min-h-screen items-center justify-center px-6 md:px-16 py-6">
+        <div className="flex flex-col md:flex-row bg-white min-h-screen items-center justify-center px-3 md:px-10 py-6 pt-20">
             {/* Left Side */}
             <div className="md:w-1/2 w-full md:pr-12 flex flex-col justify-center">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
                     Welcome to my Web <br />
                     Development Portofolio!
                 </h1>
@@ -13,19 +13,24 @@ export default function Hero() {
                     I'm Lily Smith, a passionate web developer based in USA. Here, you'll get a glimpse of my journey in the world of web development, where creativity meets functionality.
                 </p>
                 <form className="mb-2">
-                    <label className="block text-gray-700 mb-1" htmlFor="email">
+                    <label className="block text-gray-700 mb-2" htmlFor="email">
                         Your email
                     </label>
-                    <div className="flex flex-col md:flex-row gap-2">
-                        <input
-                            id="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            className="border border-gray-300 rounded-md px-4 py-3 w-full md:w-2/3 focus:outline-none focus:ring-2 focus:ring-gray-400"
-                        />
+                    <div className="flex flex-col md:flex-row gap-2 w-full">
+                        
+                        <div className="w-full md:w-2/3 relative flex group ">
+                            <input
+                                id="email"
+                                type="email"
+                                className="border focus:border focus:border-black rounded-md px-4 py-3 w-full outline-none group"
+                            />
+                            <p className=" absolute px-1 bg-white group-focus-within:-translate-y-6 top-[25%] transition transform group-focus-within:duration-500 group-focus-within:text-sm group-focus-within:text-black left-5">Enter your email</p>
+                        </div>
+                        
+                     
                         <button
                             type="submit"
-                            className="bg-gray-900 text-white font-semibold rounded-md px-6 py-3 shadow-md w-full md:w-auto"
+                            className="bg-gray-900 text-white font-semibold rounded-md cursor-pointer hover:shadow-2xl px-6 py-3 w-full md:w-auto"
                         >
                             REQUIRE OFFER
                         </button>
@@ -51,3 +56,5 @@ export default function Hero() {
         </div>
     );
 }
+
+export default Hero;
