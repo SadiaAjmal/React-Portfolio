@@ -1,49 +1,58 @@
 import React from "react";
 
-// List of logo image URLs and alt text
+// Partner / Client logo list
 const logos = [
     {
         name: "coinbase",
         src: "https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-coinbase.svg",
-        alt: "Coinbase Logo",
+        alt: "Coinbase brand mark",
     },
     {
         name: "spotify",
         src: "https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-spotify.svg",
-        alt: "Spotify Logo",
+        alt: "Spotify brand mark",
     },
     {
         name: "pinterest",
-        src:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pinterest_Logo.svg/1200px-Pinterest_Logo.svg.png",
-        alt: "Pinterest Logo",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pinterest_Logo.svg/1200px-Pinterest_Logo.svg.png",
+        alt: "Pinterest brand mark",
     },
     {
         name: "google",
         src: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-        alt: "Google Logo",
+        alt: "Google brand mark",
     },
     {
         name: "amazon",
         src: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-        alt: "Amazon Logo",
+        alt: "Amazon brand mark",
     },
     {
         name: "netflix",
         src: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-        alt: "Netflix Logo",
+        alt: "Netflix brand mark",
     },
 ];
 
 export default function Clients() {
     return (
-        <section className="w-full md:px-10 px-3 py-12 bg-white">
+        <section
+            className="w-full md:px-10 px-3 py-12 bg-white"
+            aria-labelledby="clients-title"
+        >
             <div className="flex flex-col items-start justify-center">
-                <h3 className="text-xl font-semibold text-gray-800 mb-10 text-center w-full">
-                    My awesome clients
-                </h3>
+                <h2
+                    id="clients-title"
+                    className="text-xl font-semibold text-gray-800 mb-10 text-center w-full"
+                >
+                    Trusted by leading global brands
+                </h2>
                 <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 w-full">
                     {logos.map((logo) => (
-                        <div key={logo.name} className="flex items-center justify-center">
+                        <figure
+                            key={logo.name}
+                            className="flex items-center justify-center"
+                        >
                             <img
                                 src={logo.src}
                                 alt={logo.alt}
@@ -51,7 +60,8 @@ export default function Clients() {
                                 loading="lazy"
                                 style={{ maxWidth: "110px" }}
                             />
-                        </div>
+                            <figcaption className="sr-only">{logo.alt}</figcaption>
+                        </figure>
                     ))}
                 </div>
             </div>
